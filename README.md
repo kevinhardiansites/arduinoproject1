@@ -8,28 +8,28 @@ Project ini bertujuan untuk mengembangkan sistem pengelolaan air otomatis menggu
 
 ## Alat dan Bahan
 Adapun alat dan bahan yang digunakan:
-1. Arduino Uno
-2. Sensor Ultrasonik (HC-SR04)
-3. LCD 16x2
-4. Push Button
-5. Relay 
-6. LED 
-7. Slide Switch
-8. Resistor 1k
-9. Arduino Simulator Wokwi
+1. Arduino Uno sebagai board kontroler
+2. Sensor Ultrasonik (HC-SR04) sebagai sensor jarak
+3. LCD 16x2 sebagai dashboard informasi status alat
+4. Push Button sebagai penetu set point
+5. Relay sebagai pengontrol tegangan pompa tangki air
+6. LED sebagai indikator motor pompa
+7. Slide Switch sebagai pengubah mode otomatis/manual
+8. Resistor 1k sebagai penhambat tegangan
+9. Arduino Simulator Wokwi 
 
 ## Gambar Rangkaian
 ![alt text](https://github.com/kevinhardiansites/arduinoproject1/blob/main/Daftar%20Gambar/Diagram%20Blok%20Project%20Simulasi%20Wokwi.png?raw=true)
 
-## Cara Kerja Program
+## Deskripsi Program
 
 Library yang digunakan
 ```cpp
 #include <EEPROM.h>
 #include <LiquidCrystal.h>
 ```
+Inisialisasi LCD
 ```cpp
-// Inisialisasi LCD
 LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
 ```
 Deklarasi Variabel 
@@ -37,7 +37,9 @@ Deklarasi Variabel
 long duration, inches;
 int set_val, percentage;
 bool state, pump;
-
+```
+Setup Awal
+```cpp
 void setup() {
   // Inisialisasi LCD
   lcd.begin(16, 2);
@@ -56,7 +58,9 @@ void setup() {
   set_val = EEPROM.read(0);
   if (set_val > 150) set_val = 150;
 }
-
+```
+Setup Loop
+```cpp
 void loop() {
   // Mengirim sinyal trigger ke sensor ultrasonik
   digitalWrite(3, LOW);
@@ -87,11 +91,13 @@ void loop() {
   lcd.setCursor(5, 1);
   if (pump == 1) lcd.print("ON ");
   else if (pump == 0) lcd.print("OFF");
+  // Apabila posisi value bernilai 1 (pompa bekerja) makan LCD akan menampilkan ON, dan sebaliknya
   
   // Menampilkan mode (manual/otomatis) di LCD
   lcd.setCursor(9, 1);
   if (!digitalRead(11)) lcd.print("MANUAL");
   else lcd.print("AUTO   ");
+  //Apabila menerima sinyal dari pin 11 makan LCD akan menampilkan "MANUAL", dan sebaliknya
   
   // Mengatur nilai set point atau mengubah status pompa
   if (!digitalRead(10) & !state & digitalRead(11)) {
@@ -109,11 +115,19 @@ void loop() {
   
   delay(500);
 }
-
+```
+Mengkonversi Satuan 
+```cpp
 // Fungsi untuk mengonversi waktu microsecond menjadi inches
 long microsecondsToInches(long microseconds) {
   return microseconds / 74 / 2;
 }
+```
+
+## Cara Kerja Program
+
+LCD menampilkan prosentase water level, Satus pompa tangki air(ON/OFF), Mode pompa tangki air(MANUAL/AUTO).
+...
 
 
 
