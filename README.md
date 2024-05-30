@@ -126,8 +126,14 @@ long microsecondsToInches(long microseconds) {
 
 ## Cara Kerja Program
 
-LCD menampilkan prosentase water level, Satus pompa tangki air(ON/OFF), Mode pompa tangki air(MANUAL/AUTO).
-...
+Saat simulasi dijalankan, LCD akan menampilkan prosentase water level, Satus pompa tangki air, dan Mode pompa tangki air pada posisi awal.
+![alt text](https://github.com/kevinhardiansites/arduinoproject1/blob/main/Daftar%20Gambar/kondisi%20awal.png?raw=true)
+
+Nyalakan pompa tangki air dengan menekan switch
+![alt text](https://github.com/kevinhardiansites/arduinoproject1/blob/main/Daftar%20Gambar/menekan%20switch.png?raw=true)
+
+
+
 
 
 
