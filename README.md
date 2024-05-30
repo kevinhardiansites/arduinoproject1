@@ -23,13 +23,17 @@ Adapun alat dan bahan yang digunakan:
 
 ## Cara Kerja Program
 
+Library yang digunakan
 ```cpp
 #include <EEPROM.h>
 #include <LiquidCrystal.h>
-
+```
+```cpp
 // Inisialisasi LCD
 LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
-
+```
+Deklarasi Variabel 
+```cpp
 long duration, inches;
 int set_val, percentage;
 bool state, pump;
