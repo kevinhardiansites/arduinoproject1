@@ -15,7 +15,7 @@ Adapun alat dan bahan yang digunakan:
 5. Relay sebagai pengontrol tegangan pompa tangki air
 6. LED sebagai indikator motor pompa
 7. Slide Switch sebagai pengubah mode otomatis/manual
-8. Resistor 1k sebagai penhambat tegangan
+8. Resistor 1k sebagai penghambat arus listrik
 9. Arduino Simulator Wokwi 
 
 ## Gambar Rangkaian
