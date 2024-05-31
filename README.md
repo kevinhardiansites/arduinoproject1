@@ -1,7 +1,7 @@
 # Pengembangan Sistem Pengelolaan Air Otomatis di Hotel dan Gedung Tinggi Menggunakan Arduino
 
 ## Latar Belakang
-Data BPS menunjukan pertumbuhan populasi Indonesia sangat pesat dalam 10 tahun terakhir (1,25% pertahun), menduduki peringkat 4 dunia. Hal ini telah mendorong pembangunan gedung-gedung tinggi dan hotel di berbagai kota di Indonesia. Gedung-gedung ini memiliki kebutuhan air yang sangat besar untuk berbagai keperluan seperti konsumsi air minum, kebersihan, sanitasi, serta fasilitas rekreasi seperti kolam renang dan spa. Pengelolaan air yang efisien menjadi tantangan utama dalam memastikan kenyamanan dan kepuasan penghuni maupun tamu.
+Data BPS menunjukan pertumbuhan populasi Indonesia sangat pesat dalam 10 tahun terakhir (1,25% pertahun), menduduki peringkat 4 dunia[1]. Hal ini telah mendorong pembangunan gedung-gedung tinggi dan hotel di berbagai kota di Indonesia. Gedung-gedung ini memiliki kebutuhan air yang sangat besar untuk berbagai keperluan seperti konsumsi air minum, kebersihan, sanitasi, serta fasilitas rekreasi seperti kolam renang dan spa. Pengelolaan air yang efisien menjadi tantangan utama dalam memastikan kenyamanan dan kepuasan penghuni maupun tamu.
 
 ## Tujuan
 Project ini bertujuan untuk mengembangkan sistem pengelolaan air otomatis menggunakan teknologi Arduino yang dapat mengontrol dan memantau level air di tangki-tangki hotel dan gedung tinggi secara real-time. 
@@ -136,10 +136,22 @@ long microsecondsToInches(long microseconds) {
 
 3. Klik pada sensor HC-SR04, akan muncul slider untuk mengubah-ubah nilai jarak antara air dan sensor.
 
-
 https://github.com/kevinhardiansites/arduinoproject1/assets/141954008/a5967dcf-419b-45cf-a93d-4a3af09e26c8
 
+4. Dari video do atas, apabila ketinggian air mencapai 100% maka pompa air akan otomatis mati, diindikasikan dengan LED yang mati dan status pompa air pada LCD berubah dari ON menjadi OFF.
+   Juga ketika ketinggian air dari 100% turun menyentuh angka 30%, pompa akan menyala kembali diindikasikan dengan LED yang menyala.
 
+## Kesimpulan
+
+Dengan sistem kerja alat tersebut pompa air ketika dinyalakan akan mengisi tangki air sampai 100%, kemudian saat ketinggian air berkurang menyentuh 30% maka pompa air akan otomatis menyala lagi.
+Sistem ini menjamin ketersediaan air selalu ada untuk keperluan penghuni gedung.
+
+## Saran
+1. Integrasi sistem dengan Internet of Things (IoT) memungkinkan monitoring dan kontrol jarak jauh melalui aplikasi mobile, meningkatkan responsibilitas terhadap kebutuhan air yang berubah di hotel dan gedung tinggi.
+2. Meningkatkan akurasi pengukuran level air dengan sensor yang lebih presisi, serta menambahkan sistem keamanan untuk mencegah kebocoran atau kegagalan sistem, memastikan operasi yang lebih aman dan efisien. 
+
+## Daftar Pustaka
+[1] https://www.bps.go.id/id/pressrelease/2021/01/21/1854/hasil-sensus-penduduk--sp2020--pada-september-2020-mencatat-jumlah-penduduk-sebesar-270-20-juta-jiwa-.html
 
 
 
