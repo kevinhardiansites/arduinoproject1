@@ -21,6 +21,8 @@ Adapun alat dan bahan yang digunakan:
 ## Gambar Rangkaian
 ![alt text](https://github.com/kevinhardiansites/arduinoproject1/blob/main/Daftar%20Gambar/Diagram%20Blok%20Project%20Simulasi%20Wokwi.png?raw=true)
 
+Link Simulasi: https://wokwi.com/projects/399121887300477953
+
 ## Deskripsi Program
 
 Library yang digunakan
