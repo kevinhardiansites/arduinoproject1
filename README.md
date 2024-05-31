@@ -140,8 +140,8 @@ long microsecondsToInches(long microseconds) {
 
 https://github.com/kevinhardiansites/arduinoproject1/assets/141954008/a5967dcf-419b-45cf-a93d-4a3af09e26c8
 
-4. Dari video do atas, apabila ketinggian air mencapai 100% maka pompa air akan otomatis mati, diindikasikan dengan LED yang mati dan status pompa air pada LCD berubah dari ON menjadi OFF.
-   Juga ketika ketinggian air dari 100% turun menyentuh angka 30%, pompa akan menyala kembali diindikasikan dengan LED yang menyala.
+4. Video di atas menunjukan ketika ketinggian air mencapai 100% maka pompa air akan otomatis mati, diindikasikan dengan LED yang mati dan status pompa air pada LCD berubah dari ON menjadi OFF.
+   Juga ketika ketinggian air dari 100% turun menyentuh angka 30%, pompa akan menyala kembali diindikasikan dengan LED yang menyala dan status pompa air pada LCD berubah dari OFF menjadi ON.
 
 ## Kesimpulan
 
