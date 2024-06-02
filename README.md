@@ -23,7 +23,7 @@ Adapun alat dan bahan yang digunakan:
 
 Link Simulasi: https://wokwi.com/projects/399121887300477953
 
-## Deskripsi Program
+## Penjelasan Program
 
 Library yang digunakan
 ```cpp
